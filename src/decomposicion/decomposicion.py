@@ -1,6 +1,6 @@
-from src.motor import Motor
-from src.llantas import Llantas
-from src.estereo import Estereo
+from src.decomposicion.motor import Motor
+from src.decomposicion.llantas import Llantas
+from src.decomposicion.estereo import Estereo
 
 
 class Automovil:
