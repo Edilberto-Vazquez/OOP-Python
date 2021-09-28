@@ -7,7 +7,9 @@ from src.inheritance_polimorfism.ciclista import Ciclista
 from src.complejidad_algoritmica import factorial, factorial_r
 import time
 import sys
-from src.binay_search import busqueda_lineal
+from src.linear_search import busqueda_lineal
+from src.binary_seacrh import busqueda_binaria
+from src.bubble_sort import ordenamiento_burbuja
 import random
 
 
@@ -53,15 +55,31 @@ def main():
     # final = time.time()
     # print(final - comienzo)
 
-    # Busqueda binaria
+    # Busqueda lineal
+    # tamaño_lista = int(input('De que tamaño sera la lista?'))
+    # objetivo = int(input('Que numero quieres encontrar?'))
 
+    # lista = [random.randint(0, 100) for i in range(tamaño_lista)]
+    # encontrado = busqueda_lineal(lista, objetivo)
+    # print(lista)
+    # print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"}')
+
+    # Busqueda binaria
+    # tamaño_lista = int(input('De que tamaño sera la lista?'))
+    # objetivo = int(input('Que numero quieres encontrar?'))
+
+    # lista = sorted([random.randint(0, 100) for i in range(tamaño_lista)])
+    # encontrado = busqueda_binaria(lista, 0, len(lista), objetivo)
+    # print(lista)
+    # print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"}')
+
+    # Bubble sort (ordenamiento burbuja)
     tamaño_lista = int(input('De que tamaño sera la lista?'))
-    objetivo = int(input('Que numero quieres encontrar?'))
 
     lista = [random.randint(0, 100) for i in range(tamaño_lista)]
-    encontrado = busqueda_lineal(lista, objetivo)
     print(lista)
-    print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"}')
+    lista_ordenada = ordenamiento_burbuja(lista)
+    print(lista_ordenada)
 
 
 if __name__ == '__main__':
