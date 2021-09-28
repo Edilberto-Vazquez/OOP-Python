@@ -7,6 +7,8 @@ from src.inheritance_polimorfism.ciclista import Ciclista
 from src.complejidad_algoritmica import factorial, factorial_r
 import time
 import sys
+from src.binay_search import busqueda_lineal
+import random
 
 
 def main():
@@ -39,17 +41,27 @@ def main():
 
     # complejidad algoritmica
     # sys.setrecursionlimit(100010)
-    sys.setrecursionlimit(200000)
-    n = 100000
-    comienzo = time.time()
-    factorial(n)
-    final = time.time()
-    print(final - comienzo)
+    # sys.setrecursionlimit(200000)
+    # n = 100000
+    # comienzo = time.time()
+    # factorial(n)
+    # final = time.time()
+    # print(final - comienzo)
 
-    comienzo = time.time()
-    factorial_r(n)
-    final = time.time()
-    print(final - comienzo)
+    # comienzo = time.time()
+    # factorial_r(n)
+    # final = time.time()
+    # print(final - comienzo)
+
+    # Busqueda binaria
+
+    tamaño_lista = int(input('De que tamaño sera la lista?'))
+    objetivo = int(input('Que numero quieres encontrar?'))
+
+    lista = [random.randint(0, 100) for i in range(tamaño_lista)]
+    encontrado = busqueda_lineal(lista, objetivo)
+    print(lista)
+    print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"}')
 
 
 if __name__ == '__main__':
